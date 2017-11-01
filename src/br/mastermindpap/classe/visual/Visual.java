@@ -5,34 +5,28 @@
  */
 package br.mastermindpap.classe.visual;
 
-
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author icaro
  */
-public class Visual{  
-    
+public class Visual {
+
     public void erro() {
-    String erro="Escolha todas as cores";
+        String erro = "Escolha todas as cores";
 
- JOptionPane.showMessageDialog(null,erro,"ERRO",JOptionPane.ERROR_MESSAGE);
-}
+        JOptionPane.showMessageDialog(null, erro, "ERRO", JOptionPane.ERROR_MESSAGE);
+    }
 
-public void vencer(){
-    
-JOptionPane.showMessageDialog(null, "Vencedor");
+    public void vencer() {
 
-}
+        JOptionPane.showMessageDialog(null, "Vencedor");
 
-public void perder(){
-JOptionPane.showMessageDialog(null, "Fim de jogo!");
-}
+    }
 
+    public void perder() {
+        JOptionPane.showMessageDialog(null, "Fim de jogo!");
+    }
 
-    
-   
-    
-     
 }

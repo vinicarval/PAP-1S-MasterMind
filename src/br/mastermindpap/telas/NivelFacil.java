@@ -10,47 +10,46 @@ import br.mastermindpap.classe.visual.Visual;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author icaro
  */
 public class NivelFacil extends javax.swing.JFrame {
-   AtribuicaoFacil  a;;
+
+    AtribuicaoFacil a;
+    ;
    Visual visual;
+
     /**
      * Creates new form SelecaoNivel
      */
-    public NivelFacil()  {
+    public NivelFacil() {
         this.visual = new Visual();
         this.a = new AtribuicaoFacil();
-       
-        
+
         initComponents();
-      
-   
-   
-   JLabel[] labelresposta={label2,label3,label4,label5};
-   a.setLabelsresposta(labelresposta);
-   a.criarSeqAleatoria();
-   
-   label2.setVisible(false);
-   label3.setVisible(false);
-   label4.setVisible(false);
-   label5.setVisible(false);
-   
-   btA.setVisible(true);
-   btB.setVisible(false);
-   btC.setVisible(false);
-   btD.setVisible(false);
-   btE.setVisible(false);
-   btF.setVisible(false);
-   btG.setVisible(false);
-   btH.setVisible(false);
-   btI.setVisible(false);
-   btJ.setVisible(false);
+
+        JLabel[] labelresposta = {label2, label3, label4, label5};
+        a.setLabelsresposta(labelresposta);
+        a.criarSeqAleatoria();
+
+        label2.setVisible(false);
+        label3.setVisible(false);
+        label4.setVisible(false);
+        label5.setVisible(false);
+
+        btA.setVisible(true);
+        btB.setVisible(false);
+        btC.setVisible(false);
+        btD.setVisible(false);
+        btE.setVisible(false);
+        btF.setVisible(false);
+        btG.setVisible(false);
+        btH.setVisible(false);
+        btI.setVisible(false);
+        btJ.setVisible(false);
     }
-  
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -1011,60 +1010,55 @@ public class NivelFacil extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAActionPerformed
-        try{
-            JLabel[] labeldica={labelAres1, labelAres2, labelAres3, labelAres4};
+        try {
+            JLabel[] labeldica = {labelAres1, labelAres2, labelAres3, labelAres4};
             a.setLabelDicas(labeldica);
-            JLabel[] labelusuario={labelA1,labelA2,labelA3,labelA4};
+            JLabel[] labelusuario = {labelA1, labelA2, labelA3, labelA4};
             a.setLabelUsuario(labelusuario);
-            
-            if(a.isValido()==false){
-                throw new Exception();
-            }
-           
 
-            else{
+            if (a.isValido() == false) {
+                throw new Exception();
+            } else {
 
                 a.mostrarResposta();
-                if(a.isVencedor()==true){
-                Principal principal = new Principal();
+                if (a.isVencedor() == true) {
+                    Principal principal = new Principal();
                     visual.vencer();
                     this.dispose();
                     principal.setVisible(true);
                 }
             }
-            if (a.isValido()== true){
-               btA.setVisible(false);
-               btB.setVisible(true);
-            } 
-        }
-        
-        catch(Exception e){
+            if (a.isValido() == true) {
+                btA.setVisible(false);
+                btB.setVisible(true);
+            }
+        } catch (Exception e) {
             visual.erro();
 
         }
     }//GEN-LAST:event_btAActionPerformed
 
     private void labelA1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelA1MouseClicked
-        if (btA.isVisible()== true){
-        a.definirCorLabelUsuario(labelA1);
+        if (btA.isVisible() == true) {
+            a.definirCorLabelUsuario(labelA1);
         }
     }//GEN-LAST:event_labelA1MouseClicked
 
     private void labelA4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelA4MouseClicked
-        if (btA.isVisible()== true){
-        a.definirCorLabelUsuario(labelA4);
-        }       
+        if (btA.isVisible() == true) {
+            a.definirCorLabelUsuario(labelA4);
+        }
     }//GEN-LAST:event_labelA4MouseClicked
 
     private void labelA2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelA2MouseClicked
-       if (btA.isVisible()== true){
-        a.definirCorLabelUsuario(labelA2);
+        if (btA.isVisible() == true) {
+            a.definirCorLabelUsuario(labelA2);
         }
     }//GEN-LAST:event_labelA2MouseClicked
 
     private void labelA3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelA3MouseClicked
-       if (btA.isVisible()== true){
-        a.definirCorLabelUsuario(labelA3);
+        if (btA.isVisible() == true) {
+            a.definirCorLabelUsuario(labelA3);
         }
     }//GEN-LAST:event_labelA3MouseClicked
 
@@ -1076,524 +1070,485 @@ public class NivelFacil extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSelcaoNiveisActionPerformed
 
     private void labelB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelB1MouseClicked
-        if (btB.isVisible()== true){
-        a.definirCorLabelUsuario(labelB1);
+        if (btB.isVisible() == true) {
+            a.definirCorLabelUsuario(labelB1);
         }
     }//GEN-LAST:event_labelB1MouseClicked
 
     private void labelB2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelB2MouseClicked
-        if (btB.isVisible()== true){
-        a.definirCorLabelUsuario(labelB2);
+        if (btB.isVisible() == true) {
+            a.definirCorLabelUsuario(labelB2);
         }
     }//GEN-LAST:event_labelB2MouseClicked
 
     private void btBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btBActionPerformed
-        try{
-            JLabel[] labeldica={labelBres1, labelBres2, labelBres3, labelBres4};
+        try {
+            JLabel[] labeldica = {labelBres1, labelBres2, labelBres3, labelBres4};
             a.setLabelDicas(labeldica);
-            JLabel[] labelusuario={labelB1,labelB2,labelB3,labelB4};
+            JLabel[] labelusuario = {labelB1, labelB2, labelB3, labelB4};
             a.setLabelUsuario(labelusuario);
-            
-            if(a.isValido()==false){
-                throw new Exception();
-            }
 
-            else{
+            if (a.isValido() == false) {
+                throw new Exception();
+            } else {
 
                 a.mostrarResposta();
-                if(a.isVencedor()==true){
-                Principal principal = new Principal();
+                if (a.isVencedor() == true) {
+                    Principal principal = new Principal();
                     visual.vencer();
                     this.dispose();
                     principal.setVisible(true);
                 }
             }
-            if (a.isValido()== true){
-               btB.setVisible(false);
-               btC.setVisible(true);
-            } 
-        }
-        
-        catch(Exception e){
+            if (a.isValido() == true) {
+                btB.setVisible(false);
+                btC.setVisible(true);
+            }
+        } catch (Exception e) {
             visual.erro();
 
         }
     }//GEN-LAST:event_btBActionPerformed
 
     private void labelB3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelB3MouseClicked
-       if (btB.isVisible()== true){
-        a.definirCorLabelUsuario(labelB3);
+        if (btB.isVisible() == true) {
+            a.definirCorLabelUsuario(labelB3);
         }
     }//GEN-LAST:event_labelB3MouseClicked
 
     private void labelB4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelB4MouseClicked
-        if (btB.isVisible()== true){
-        a.definirCorLabelUsuario(labelB4);
+        if (btB.isVisible() == true) {
+            a.definirCorLabelUsuario(labelB4);
         }
     }//GEN-LAST:event_labelB4MouseClicked
 
     private void labelC1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelC1MouseClicked
-        if (btC.isVisible()== true){
-        a.definirCorLabelUsuario(labelC1);
+        if (btC.isVisible() == true) {
+            a.definirCorLabelUsuario(labelC1);
         }
     }//GEN-LAST:event_labelC1MouseClicked
 
     private void labelC2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelC2MouseClicked
-        if (btC.isVisible()== true){
-        a.definirCorLabelUsuario(labelC2);
+        if (btC.isVisible() == true) {
+            a.definirCorLabelUsuario(labelC2);
         }
     }//GEN-LAST:event_labelC2MouseClicked
 
     private void btCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCActionPerformed
-        try{
-            JLabel[] labeldica={labelCres1, labelCres2, labelCres3, labelCres4};
+        try {
+            JLabel[] labeldica = {labelCres1, labelCres2, labelCres3, labelCres4};
             a.setLabelDicas(labeldica);
-            JLabel[] labelusuario={labelC1,labelC2,labelC3,labelC4};
+            JLabel[] labelusuario = {labelC1, labelC2, labelC3, labelC4};
             a.setLabelUsuario(labelusuario);
-            
-            if(a.isValido()==false){
-                throw new Exception();
-            }
 
-            else{
+            if (a.isValido() == false) {
+                throw new Exception();
+            } else {
 
                 a.mostrarResposta();
-                if(a.isVencedor()==true){
-                Principal principal = new Principal();
+                if (a.isVencedor() == true) {
+                    Principal principal = new Principal();
                     visual.vencer();
                     this.dispose();
                     principal.setVisible(true);
                 }
             }
-            if (a.isValido()== true){
-               btC.setVisible(false);
-               btD.setVisible(true);
-            } 
-        }
-        
-        catch(Exception e){
+            if (a.isValido() == true) {
+                btC.setVisible(false);
+                btD.setVisible(true);
+            }
+        } catch (Exception e) {
             visual.erro();
 
         }
     }//GEN-LAST:event_btCActionPerformed
 
     private void labelC3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelC3MouseClicked
-        if (btC.isVisible()== true){
-        a.definirCorLabelUsuario(labelC3);
+        if (btC.isVisible() == true) {
+            a.definirCorLabelUsuario(labelC3);
         }
     }//GEN-LAST:event_labelC3MouseClicked
 
     private void labelC4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelC4MouseClicked
-        if (btC.isVisible()== true){
-        a.definirCorLabelUsuario(labelC4);
+        if (btC.isVisible() == true) {
+            a.definirCorLabelUsuario(labelC4);
         }
     }//GEN-LAST:event_labelC4MouseClicked
 
     private void btDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDActionPerformed
-        try{
-            JLabel[] labeldica={labelDres1, labelDres2, labelDres3, labelDres4};
+        try {
+            JLabel[] labeldica = {labelDres1, labelDres2, labelDres3, labelDres4};
             a.setLabelDicas(labeldica);
-            JLabel[] labelusuario={labelD1,labelD2,labelD3,labelD4};
+            JLabel[] labelusuario = {labelD1, labelD2, labelD3, labelD4};
             a.setLabelUsuario(labelusuario);
-            
-            if(a.isValido()==false){
-                throw new Exception();
-            }
 
-            else{
+            if (a.isValido() == false) {
+                throw new Exception();
+            } else {
 
                 a.mostrarResposta();
-                if(a.isVencedor()==true){
-                Principal principal = new Principal();
+                if (a.isVencedor() == true) {
+                    Principal principal = new Principal();
                     visual.vencer();
                     this.dispose();
                     principal.setVisible(true);
                 }
-            }if (a.isValido()== true){
-               btD.setVisible(false);
-               btE.setVisible(true);
-            } 
-            
-        }
-        
-        catch(Exception e){
+            }
+            if (a.isValido() == true) {
+                btD.setVisible(false);
+                btE.setVisible(true);
+            }
+
+        } catch (Exception e) {
             visual.erro();
 
         }
     }//GEN-LAST:event_btDActionPerformed
 
     private void labelD1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelD1MouseClicked
-        if (btD.isVisible()== true){
-        a.definirCorLabelUsuario(labelD1);
+        if (btD.isVisible() == true) {
+            a.definirCorLabelUsuario(labelD1);
         }
     }//GEN-LAST:event_labelD1MouseClicked
 
     private void labelD3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelD3MouseClicked
-        if (btD.isVisible()== true){
-        a.definirCorLabelUsuario(labelD3);
+        if (btD.isVisible() == true) {
+            a.definirCorLabelUsuario(labelD3);
         }
     }//GEN-LAST:event_labelD3MouseClicked
 
     private void labelD4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelD4MouseClicked
-        if (btD.isVisible()== true){
-        a.definirCorLabelUsuario(labelD4);
+        if (btD.isVisible() == true) {
+            a.definirCorLabelUsuario(labelD4);
         }
     }//GEN-LAST:event_labelD4MouseClicked
 
     private void labelD2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelD2MouseClicked
-        if (btD.isVisible()== true){
-        a.definirCorLabelUsuario(labelD2);
+        if (btD.isVisible() == true) {
+            a.definirCorLabelUsuario(labelD2);
         }
     }//GEN-LAST:event_labelD2MouseClicked
 
     private void labelE4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelE4MouseClicked
-        if (btE.isVisible()== true){
-        a.definirCorLabelUsuario(labelE4);
+        if (btE.isVisible() == true) {
+            a.definirCorLabelUsuario(labelE4);
         }
     }//GEN-LAST:event_labelE4MouseClicked
 
     private void btEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEActionPerformed
-        try{
-            JLabel[] labeldica={labelEres1, labelEres2, labelEres3, labelEres4};
+        try {
+            JLabel[] labeldica = {labelEres1, labelEres2, labelEres3, labelEres4};
             a.setLabelDicas(labeldica);
-            JLabel[] labelusuario={labelE1,labelE2,labelE3,labelE4};
+            JLabel[] labelusuario = {labelE1, labelE2, labelE3, labelE4};
             a.setLabelUsuario(labelusuario);
-            
-            if(a.isValido()==false){
-                throw new Exception();
-            }
 
-            else{
+            if (a.isValido() == false) {
+                throw new Exception();
+            } else {
 
                 a.mostrarResposta();
-                if(a.isVencedor()==true){
-                Principal principal = new Principal();
+                if (a.isVencedor() == true) {
+                    Principal principal = new Principal();
                     visual.vencer();
                     this.dispose();
                     principal.setVisible(true);
 
-
                 }
             }
-            if (a.isValido()== true){
-               btE.setVisible(false);
-               btF.setVisible(true);
-            } 
-        }
-        
-        catch(Exception e){
+            if (a.isValido() == true) {
+                btE.setVisible(false);
+                btF.setVisible(true);
+            }
+        } catch (Exception e) {
             visual.erro();
 
         }
     }//GEN-LAST:event_btEActionPerformed
 
     private void labelE3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelE3MouseClicked
-        if (btE.isVisible()== true){
-        a.definirCorLabelUsuario(labelE3);
+        if (btE.isVisible() == true) {
+            a.definirCorLabelUsuario(labelE3);
         }
     }//GEN-LAST:event_labelE3MouseClicked
 
     private void labelE2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelE2MouseClicked
-        if (btE.isVisible()== true){
-        a.definirCorLabelUsuario(labelE2);
+        if (btE.isVisible() == true) {
+            a.definirCorLabelUsuario(labelE2);
         }
     }//GEN-LAST:event_labelE2MouseClicked
 
     private void labelE1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelE1MouseClicked
-        if (btE.isVisible()== true){
-        a.definirCorLabelUsuario(labelE1);
+        if (btE.isVisible() == true) {
+            a.definirCorLabelUsuario(labelE1);
         }
     }//GEN-LAST:event_labelE1MouseClicked
 
     private void labelF4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelF4MouseClicked
-        if (btF.isVisible()== true){
-        a.definirCorLabelUsuario(labelF4);
+        if (btF.isVisible() == true) {
+            a.definirCorLabelUsuario(labelF4);
         }
     }//GEN-LAST:event_labelF4MouseClicked
 
     private void btFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFActionPerformed
-        try{
-            JLabel[] labeldica={labelFres1, labelFres2, labelFres3, labelFres4};
+        try {
+            JLabel[] labeldica = {labelFres1, labelFres2, labelFres3, labelFres4};
             a.setLabelDicas(labeldica);
-            JLabel[] labelusuario={labelF1,labelF2,labelF3,labelF4};
+            JLabel[] labelusuario = {labelF1, labelF2, labelF3, labelF4};
             a.setLabelUsuario(labelusuario);
-            
-            if(a.isValido()==false){
-                throw new Exception();
-            }
 
-            else{
+            if (a.isValido() == false) {
+                throw new Exception();
+            } else {
 
                 a.mostrarResposta();
-                if(a.isVencedor()==true){
-                Principal principal = new Principal();
+                if (a.isVencedor() == true) {
+                    Principal principal = new Principal();
                     visual.vencer();
                     this.dispose();
                     principal.setVisible(true);
 
-
                 }
             }
-            if (a.isValido()== true){
-               btF.setVisible(false);
-               btG.setVisible(true);
-            } 
-        }
-        
-        catch(Exception e){
+            if (a.isValido() == true) {
+                btF.setVisible(false);
+                btG.setVisible(true);
+            }
+        } catch (Exception e) {
             visual.erro();
 
         }
     }//GEN-LAST:event_btFActionPerformed
 
     private void labelF3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelF3MouseClicked
-        if (btF.isVisible()== true){
-        a.definirCorLabelUsuario(labelF3);
+        if (btF.isVisible() == true) {
+            a.definirCorLabelUsuario(labelF3);
         }
     }//GEN-LAST:event_labelF3MouseClicked
 
     private void labelF2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelF2MouseClicked
-        if (btF.isVisible()== true){
-        a.definirCorLabelUsuario(labelF2);
+        if (btF.isVisible() == true) {
+            a.definirCorLabelUsuario(labelF2);
         }
     }//GEN-LAST:event_labelF2MouseClicked
 
     private void labelF1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelF1MouseClicked
-        if (btF.isVisible()== true){
-        a.definirCorLabelUsuario(labelF1);
+        if (btF.isVisible() == true) {
+            a.definirCorLabelUsuario(labelF1);
         }
     }//GEN-LAST:event_labelF1MouseClicked
 
     private void labelG4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelG4MouseClicked
-        if (btG.isVisible()== true){
-        a.definirCorLabelUsuario(labelG4);
+        if (btG.isVisible() == true) {
+            a.definirCorLabelUsuario(labelG4);
         }
     }//GEN-LAST:event_labelG4MouseClicked
 
     private void btGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGActionPerformed
-        try{
-            JLabel[] labeldica={labelGres1, labelGres2, labelGres3, labelGres4};
+        try {
+            JLabel[] labeldica = {labelGres1, labelGres2, labelGres3, labelGres4};
             a.setLabelDicas(labeldica);
-            JLabel[] labelusuario={labelG1,labelG2,labelG3,labelG4};
+            JLabel[] labelusuario = {labelG1, labelG2, labelG3, labelG4};
             a.setLabelUsuario(labelusuario);
-            
-            if(a.isValido()==false){
-                throw new Exception();
-            }
 
-            else{
+            if (a.isValido() == false) {
+                throw new Exception();
+            } else {
 
                 a.mostrarResposta();
-                if(a.isVencedor()==true){
-                Principal principal = new Principal();
+                if (a.isVencedor() == true) {
+                    Principal principal = new Principal();
                     visual.vencer();
                     this.dispose();
                     principal.setVisible(true);
 
-
                 }
             }
-            if (a.isValido()== true){
-               btG.setVisible(false);
-               btH.setVisible(true);
-            } 
-        }
-        
-        catch(Exception e){
+            if (a.isValido() == true) {
+                btG.setVisible(false);
+                btH.setVisible(true);
+            }
+        } catch (Exception e) {
             visual.erro();
 
         }
     }//GEN-LAST:event_btGActionPerformed
 
     private void labelG3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelG3MouseClicked
-        if (btG.isVisible()== true){
-        a.definirCorLabelUsuario(labelG3);
+        if (btG.isVisible() == true) {
+            a.definirCorLabelUsuario(labelG3);
         }
     }//GEN-LAST:event_labelG3MouseClicked
 
     private void labelG2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelG2MouseClicked
-        if (btG.isVisible()== true){
-        a.definirCorLabelUsuario(labelG2);
+        if (btG.isVisible() == true) {
+            a.definirCorLabelUsuario(labelG2);
         }
     }//GEN-LAST:event_labelG2MouseClicked
 
     private void labelG1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelG1MouseClicked
-        if (btG.isVisible()== true){
-        a.definirCorLabelUsuario(labelG1);
+        if (btG.isVisible() == true) {
+            a.definirCorLabelUsuario(labelG1);
         }
     }//GEN-LAST:event_labelG1MouseClicked
 
     private void btHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btHActionPerformed
-        try{
-            JLabel[] labeldica={labelHres1, labelHres2, labelHres3, labelHres4};
+        try {
+            JLabel[] labeldica = {labelHres1, labelHres2, labelHres3, labelHres4};
             a.setLabelDicas(labeldica);
-            JLabel[] labelusuario={labelH1,labelH2,labelH3,labelH4};
+            JLabel[] labelusuario = {labelH1, labelH2, labelH3, labelH4};
             a.setLabelUsuario(labelusuario);
-            
-            if(a.isValido()==false){
-                throw new Exception();
-            }
 
-            else{
+            if (a.isValido() == false) {
+                throw new Exception();
+            } else {
 
                 a.mostrarResposta();
-                if(a.isVencedor()==true){
-                Principal principal = new Principal();
+                if (a.isVencedor() == true) {
+                    Principal principal = new Principal();
                     visual.vencer();
                     this.dispose();
                     principal.setVisible(true);
                 }
             }
-            if (a.isValido()== true){
-               btH.setVisible(false);
-               btI.setVisible(true);
-            } 
-        }
-        
-        catch(Exception e){
+            if (a.isValido() == true) {
+                btH.setVisible(false);
+                btI.setVisible(true);
+            }
+        } catch (Exception e) {
             visual.erro();
 
         }
     }//GEN-LAST:event_btHActionPerformed
 
     private void labelH2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelH2MouseClicked
-        if (btH.isVisible()== true){
-        a.definirCorLabelUsuario(labelH2);
+        if (btH.isVisible() == true) {
+            a.definirCorLabelUsuario(labelH2);
         }
     }//GEN-LAST:event_labelH2MouseClicked
 
     private void labelH1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelH1MouseClicked
-        if (btH.isVisible()== true){
-        a.definirCorLabelUsuario(labelH1);
+        if (btH.isVisible() == true) {
+            a.definirCorLabelUsuario(labelH1);
         }
     }//GEN-LAST:event_labelH1MouseClicked
 
     private void labelH4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelH4MouseClicked
-        if (btH.isVisible()== true){
-        a.definirCorLabelUsuario(labelH4);
+        if (btH.isVisible() == true) {
+            a.definirCorLabelUsuario(labelH4);
         }
     }//GEN-LAST:event_labelH4MouseClicked
 
     private void labelH3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelH3MouseClicked
-        if (btH.isVisible()== true){
-        a.definirCorLabelUsuario(labelH3);
+        if (btH.isVisible() == true) {
+            a.definirCorLabelUsuario(labelH3);
         }
     }//GEN-LAST:event_labelH3MouseClicked
 
     private void labelI4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelI4MouseClicked
-        if (btI.isVisible()== true){
-        a.definirCorLabelUsuario(labelI4);
+        if (btI.isVisible() == true) {
+            a.definirCorLabelUsuario(labelI4);
         }
     }//GEN-LAST:event_labelI4MouseClicked
 
     private void labelI2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelI2MouseClicked
-        if (btI.isVisible()== true){
-        a.definirCorLabelUsuario(labelI2);
+        if (btI.isVisible() == true) {
+            a.definirCorLabelUsuario(labelI2);
         }
     }//GEN-LAST:event_labelI2MouseClicked
 
     private void labelI3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelI3MouseClicked
-        if (btI.isVisible()== true){
-        a.definirCorLabelUsuario(labelI3);
+        if (btI.isVisible() == true) {
+            a.definirCorLabelUsuario(labelI3);
         }
     }//GEN-LAST:event_labelI3MouseClicked
 
     private void btIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIActionPerformed
-        try{
-            JLabel[] labeldica={labelIres1, labelIres2, labelIres3, labelIres4};
+        try {
+            JLabel[] labeldica = {labelIres1, labelIres2, labelIres3, labelIres4};
             a.setLabelDicas(labeldica);
-            JLabel[] labelusuario={labelI1,labelI2,labelI3,labelI4};
+            JLabel[] labelusuario = {labelI1, labelI2, labelI3, labelI4};
             a.setLabelUsuario(labelusuario);
-            
-            if(a.isValido()==false){
-                throw new Exception();
-            }
 
-            else{
+            if (a.isValido() == false) {
+                throw new Exception();
+            } else {
 
                 a.mostrarResposta();
-                if(a.isVencedor()==true){
+                if (a.isVencedor() == true) {
                     Principal principal = new Principal();
                     visual.vencer();
                     this.dispose();
                     principal.setVisible(true);
                 }
-               
+
             }
-            if (a.isValido()== true){
-               btI.setVisible(false);
-               btJ.setVisible(true);
-            } 
-        }
-        
-        catch(Exception e){
+            if (a.isValido() == true) {
+                btI.setVisible(false);
+                btJ.setVisible(true);
+            }
+        } catch (Exception e) {
             visual.erro();
 
         }
     }//GEN-LAST:event_btIActionPerformed
 
     private void labelI1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelI1MouseClicked
-        if (btI.isVisible()== true){
-        a.definirCorLabelUsuario(labelI1);
+        if (btI.isVisible() == true) {
+            a.definirCorLabelUsuario(labelI1);
         }
     }//GEN-LAST:event_labelI1MouseClicked
 
     private void labelJ4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelJ4MouseClicked
-       if (btJ.isVisible()== true){
-        a.definirCorLabelUsuario(labelJ4);
+        if (btJ.isVisible() == true) {
+            a.definirCorLabelUsuario(labelJ4);
         }
     }//GEN-LAST:event_labelJ4MouseClicked
 
     private void labelJ2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelJ2MouseClicked
-        if (btJ.isVisible()== true){
-        a.definirCorLabelUsuario(labelJ2);
+        if (btJ.isVisible() == true) {
+            a.definirCorLabelUsuario(labelJ2);
         }
     }//GEN-LAST:event_labelJ2MouseClicked
 
     private void btJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJActionPerformed
-        try{
-            JLabel[] labeldica={labelJres1, labelJres2, labelJres3, labelJres4};
+        try {
+            JLabel[] labeldica = {labelJres1, labelJres2, labelJres3, labelJres4};
             a.setLabelDicas(labeldica);
-            JLabel[] labelusuario={labelJ1,labelJ2,labelJ3,labelJ4};
+            JLabel[] labelusuario = {labelJ1, labelJ2, labelJ3, labelJ4};
             a.setLabelUsuario(labelusuario);
-            
-            if(a.isValido()==false){
-                throw new Exception();
-            }
 
-            else{
+            if (a.isValido() == false) {
+                throw new Exception();
+            } else {
 
                 a.mostrarResposta();
-                if(a.isVencedor()==true){
-                Principal principal = new Principal();
+                if (a.isVencedor() == true) {
+                    Principal principal = new Principal();
                     visual.vencer();
                     this.dispose();
-                    principal.setVisible(true);                                                   
-                }
-                else{
+                    principal.setVisible(true);
+                } else {
                     Principal principal = new Principal();
                     visual.perder();
                     this.dispose();
                     principal.setVisible(true);
                 }
             }
-        }
-        
-        catch(Exception e){
+        } catch (Exception e) {
             visual.erro();
 
         }
     }//GEN-LAST:event_btJActionPerformed
 
     private void labelJ1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelJ1MouseClicked
-        if (btJ.isVisible()== true){
-        a.definirCorLabelUsuario(labelJ1);
+        if (btJ.isVisible() == true) {
+            a.definirCorLabelUsuario(labelJ1);
         }
     }//GEN-LAST:event_labelJ1MouseClicked
 
     private void labelJ3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelJ3MouseClicked
-        if (btJ.isVisible()== true){
-        a.definirCorLabelUsuario(labelJ3);
+        if (btJ.isVisible() == true) {
+            a.definirCorLabelUsuario(labelJ3);
         }
     }//GEN-LAST:event_labelJ3MouseClicked
 

@@ -9,32 +9,35 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import br.mastermindpap.impossivel.AtribuicaoImpossivel;
+
 /**
  *
  * @author icaro
  */
 public class TesteImpossivel {
+
     //teste de metodo especifico do nivel impossivel
     AtribuicaoImpossivel atimp;
+
     @Before
-    public void inicializar()
-    {
-    atimp=new AtribuicaoImpossivel();
-    
+    public void inicializar() {
+        atimp = new AtribuicaoImpossivel();
+
     }
+
     @Test
-         public void testarNivelImpossivel(){
-           int cont=0;
-           int[] vet=atimp.gerarNumerosImpossivel();
-           while(cont<10){
-           if(vet[cont] >= 10){
-                fail("Falhou numero maior ou igual a 10 " +vet[cont]);
-           break;
-           }
-               
-           cont++;
-           }
-   
-       }
-   
+    public void testarNivelImpossivel() {
+        int cont = 0;
+        int[] vet = atimp.gerarNumerosImpossivel();
+        while (cont < 10) {
+            if (vet[cont] >= 10) {
+                fail("Falhou numero maior ou igual a 10 " + vet[cont]);
+                break;
+            }
+
+            cont++;
+        }
+
+    }
+
 }

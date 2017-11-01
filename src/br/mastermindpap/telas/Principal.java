@@ -18,10 +18,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
-     
-        
-        
-        
+
     }
 
     /**
@@ -157,7 +154,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnInicianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicianteActionPerformed
         NivelIniciante nivel = new NivelIniciante();
-        
+
         nivel.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnInicianteActionPerformed
@@ -173,28 +170,28 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnFacilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFacilActionPerformed
         NivelFacil nivel = new NivelFacil();
-        
+
         nivel.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnFacilActionPerformed
 
     private void btnMedioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedioActionPerformed
         NivelMedio nivel = new NivelMedio();
-        
+
         nivel.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnMedioActionPerformed
 
     private void btnDificilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDificilActionPerformed
         NivelDificil nivel = new NivelDificil();
-        
+
         nivel.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnDificilActionPerformed
 
     private void btnImpossivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImpossivelActionPerformed
         NivelImpossivel nivel = new NivelImpossivel();
-        
+
         nivel.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnImpossivelActionPerformed

@@ -10,9 +10,14 @@ package br.mastermindpap.interfaces;
  * @author icaro
  */
 public interface IComparacao {
+
     public boolean isVencedor();
+
     public boolean isValido();
+
     public int[] compararMesmaPosicao();
-    public int[]compararOutraPosicao();
+
+    public int[] compararOutraPosicao();
+
     public void mostrarResposta();
 }

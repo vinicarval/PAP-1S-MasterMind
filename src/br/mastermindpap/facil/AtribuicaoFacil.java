@@ -15,50 +15,42 @@ import javax.swing.JLabel;
  *
  * @author icaro
  */
-public class AtribuicaoFacil extends AtribuicaoIniciante{
-   
-    public AtribuicaoFacil()
-    {
-   super();
+public class AtribuicaoFacil extends AtribuicaoIniciante {
+
+    public AtribuicaoFacil() {
+        super();
     }
-    
+
     @Override
-    public void definirCorLabelUsuario(JLabel label){
-  
-   String label1;
-   label1 = label.getIcon().toString();
-   
-       
-         super.definirCorLabelUsuario(label); 
-        if(label1.equals(AtribuicaoIniciante.IMG_VERDE.toString()))
-        {
-         label.setIcon(AtribuicaoFacil.IMG_LARANJA);
+    public void definirCorLabelUsuario(JLabel label) {
+
+        String label1;
+        label1 = label.getIcon().toString();
+
+        super.definirCorLabelUsuario(label);
+        if (label1.equals(AtribuicaoIniciante.IMG_VERDE.toString())) {
+            label.setIcon(AtribuicaoFacil.IMG_LARANJA);
+        } else if (label1.equals(AtribuicaoIniciante.IMG_LARANJA.toString())) {
+            label.setIcon(AtribuicaoFacil.IMG_AMARELO);
+        } else if (label1.equals(AtribuicaoIniciante.IMG_AMARELO.toString())) {
+            label.setIcon(AtribuicaoIniciante.IMG_ROSA);
         }
-         else if(label1.equals(AtribuicaoIniciante.IMG_LARANJA.toString()))
-         {
-     label.setIcon(AtribuicaoFacil.IMG_AMARELO);
-         }
-         else if(label1.equals(AtribuicaoIniciante.IMG_AMARELO.toString()))
-         { 
-      label.setIcon(AtribuicaoIniciante.IMG_ROSA);
-         }
 
     }
+
     @Override
-      public List criarLista()
-     {
-         String[] vetor=new String[6];
-         for(int cont=0;cont<vetor.length;cont++){
-         vetor[cont]=String.valueOf(cont);
-         
-         }
-         
-            List lista;
-            lista=Arrays.asList(vetor);
-             
-            Collections.shuffle(lista);
-            return lista;
-     }
-      
-  
+    public List criarLista() {
+        String[] vetor = new String[6];
+        for (int cont = 0; cont < vetor.length; cont++) {
+            vetor[cont] = String.valueOf(cont);
+
+        }
+
+        List lista;
+        lista = Arrays.asList(vetor);
+
+        Collections.shuffle(lista);
+        return lista;
+    }
+
 }

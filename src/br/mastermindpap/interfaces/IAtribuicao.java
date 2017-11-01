@@ -13,7 +13,10 @@ import javax.swing.JLabel;
  * @author icaro
  */
 public interface IAtribuicao {
+
     public void definirCorLabelUsuario(JLabel label);
+
     public List criarLista();
+
     public void criarSeqAleatoria();
 }
